@@ -1,0 +1,4 @@
+1.Please cut all files (but the G-code testing files) from the memory card and paste them to your computer.
+
+2.The G-code printing files could only be saved in the top-level directory, 
+  Please do not create any folder to save them into the folder.
