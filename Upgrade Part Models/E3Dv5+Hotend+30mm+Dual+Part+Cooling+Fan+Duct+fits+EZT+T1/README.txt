@@ -1,0 +1,1 @@
+E3Dv5 Hotend 30mm Dual Part Cooling Fan Duct fits EZT T1 by Knutwurst on Thingiverse: https://www.thingiverse.com/thing:4513844

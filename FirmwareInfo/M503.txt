@@ -1,0 +1,44 @@
+Steps per unit:  M92 X80.000000 Y80.000000 Z80.000000 E95.000000
+Maximum feedrates (mm/s):
+  M203 X200.000000 Y200.000000 Z200.000000 E45.000000
+Maximum Acceleration (mm/s2):
+  M201 X800 Y800 Z800 E800
+Acceleration: S=acceleration, T=retract acceleration
+  M204 S800.000000 T800.000000
+Advanced variables: S=Min feedrate (mm/s), T=Min travel feedrate (mm/s), B=minimum segment time (ms), X=maximum XY jerk (mm/s),  Z=maximum Z jerk (mm/s),  E=maximum E jerk (mm/s)
+  M205 S0.000000 T0.000000 B20000 X20.000000 Z20.000000 E20.000000
+Home offset (mm):
+  M206 X0.000000 Y0.000000 Z0.000000
+PID settings:
+   M301 P8.000000 I2.600000 D1.600000
+
+
+
+   Printer is now online. 
+   echo:Marlin 1.1.8 echo: Last Updated: 2017-12-25 12:00 | Author: (Stuart Goggin, default config) 
+   echo:Compiled: Mar 19 2018 
+   echo: Free Memory: 3342 PlannerBufferBytes: 1264 
+   echo:V47 stored settings retrieved (614 bytes; crc 15333) 
+   echo: G21 ; Units in mm echo: M149 C ; Units in Celsius 
+   echo:Filament settings: Disabled 
+   echo: M200 D1.75 
+   echo: M200 D0 
+   echo:Steps per unit: 
+   echo: M92 X80.00 Y80.00 Z80.00 E97.00 
+   echo:Maximum feedrates (units/s): 
+   echo: M203 X500.00 Y500.00 Z500.00 E25.00 
+   echo:Maximum Acceleration (units/s2): 
+   echo: M201 X9000 Y9000 Z9000 E10000 
+   echo:Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel> 
+   echo: M204 P3000.00 R3000.00 T3000.00 
+   echo:Advanced: S<min_feedrate> T<min_travel_feedrate> B<min_segment_time_us> X<max_xy_jerk> Z<max_z_jerk> E<max_e_jerk> 
+   echo: M205 S0.00 T0.00 B20000 X10.00 Y10.00 Z10.00 E5.00 
+   echo:Auto Bed Leveling: echo: M420 S0 
+   echo:Endstop adjustment: echo: M666 X0.00 Y0.00 Z0.00 
+   echo:Delta settings: L<diagonal_rod> R<radius> H<height> S<segments_per_s> B<calibration radius> XYZ<tower angle corrections> 
+   echo: M665 L215.00 R109.00 H317.80 S100.00 B78.00 X0.00 Y0.00 Z0.00 
+   echo:Material heatup parameters:
+   echo: M145 S0 H180 B70 F255 
+   echo: M145 S1 H240 B100 F255 
+   echo:PID settings: 
+   echo: M301 P22.20 I1.08 D114.00
