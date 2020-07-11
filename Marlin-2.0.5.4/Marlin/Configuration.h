@@ -104,7 +104,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -483,10 +483,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+  //EZT3D-T1-B1 stock E3DV5 clone
+  #define DEFAULT_Kp 15.48
+  #define DEFAULT_Ki 1.01
+  #define DEFAULT_Kd 59.41
+  
   // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  //#define DEFAULT_Kp 22.2
+  //#define DEFAULT_Ki 1.08
+  //#define DEFAULT_Kd 114
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -640,13 +645,13 @@
   #endif
 
   // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
-  #define DELTA_PRINTABLE_RADIUS 90.0    // (mm)
+  #define DELTA_PRINTABLE_RADIUS 93.85    // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
   #define DELTA_DIAGONAL_ROD 200.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 323.00             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 321.43             // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
@@ -656,7 +661,7 @@
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { -0.04, -0.16, 0.20 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
