@@ -3,16 +3,16 @@
 # Original file from http://www.sternwolken.de/tmpup/3dprint/pressureadvance2.py
 
 # extrusion parameters (mm)
-extrusion_width   = 0.48 # typical: nozzleDiameter * 1.2 (f.e. a 0.4mm nozzle should be set to 0.48mm extrusion width in slicers)
-layer_height      = 0.2 # max: 50% of your extrusion_width
+extrusion_width   = 0.6 # typical: nozzleDiameter * 1.2 (f.e. a 0.4mm nozzle should be set to 0.48mm extrusion width in slicers)
+layer_height      = 0.3 # max: 50% of your extrusion_width
 filament_diameter = 1.75 # manufacturers typically sell 1.73-1.74mm filament diameter (always lower than 1.75 to prevent cloggs) tested with many brands
 
 # print speeds (mm/s)
-travel_speed      = 200
-first_layer_speed =  40
+travel_speed      = 220
+first_layer_speed =  30
 slow_speed        =  20 # speed for the slow segments
-fast_speed        =  60 # speed for the fast segments
-cooling_fan_speed = 128 # from 0 to 255
+fast_speed        =  80 # speed for the fast segments
+cooling_fan_speed = 200 # from 0 to 255
 
 # calibration object dimensions (mm)
 layers        = 100
@@ -21,15 +21,15 @@ num_patterns  =  4
 pattern_width =  5
 
 # pressure advance gradient (s)
-pressure_advance_min = 0.0
-pressure_advance_max = 0.5
+pressure_advance_min = 0.35
+pressure_advance_max = 0.65
 
 # center of print bed (mm)
 # needed to position this print in the middle of your print bed
 # If you are not sure about this: Take a look into your slicer. Normally you will see the origin (center) visualized as xyz-axis
 # f.e. I have a 285x220mm bed, my printers origin is at X0, Y0 (front left corner), so the offset value you would need for X are 285/2.0 = 142.5
-offset_x = 75
-offset_y = 75
+offset_x = 0
+offset_y = 0
 
 layer0_z = layer_height
 
@@ -38,7 +38,7 @@ layer0_z = layer_height
 # general tipp: to output a 'new line' after your gcode command use '\n' which is the representation of the new line byte sequence
 # in short: use '\n\' after each line of your regular start.gcode command
 f=open("linear_advance.gcode","w")
-f.write('; START.gcode\n M104 S200 T0 \n M109 S200 T0\n G28 ; home all axes\n T0 ; set active extruder to 0\n G92 E0.0000 ; reset extruded length \n ')
+f.write('; START.gcode\n M104 S205 T0 \n M109 S205 T0 \n M140 S40 \n M190 S40 \n G28 ; home all axes\n T0 ; set active extruder to 0\n G92 E0.0000 ; reset extruded length \n ')
 f.write('\nM83 ; relative extrusion for this python script\n')
 
 
