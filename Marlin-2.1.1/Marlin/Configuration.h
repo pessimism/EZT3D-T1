@@ -640,9 +640,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
   //EZT3D-T1-B1-S E3DV6 clone
-  #define DEFAULT_Kp 8.58
-  #define DEFAULT_Ki 0.48
-  #define DEFAULT_Kd 38.62
+  #define DEFAULT_Kp 9.9
+  #define DEFAULT_Ki 0.6
+  #define DEFAULT_Kd 47
   #endif
 #endif
 
